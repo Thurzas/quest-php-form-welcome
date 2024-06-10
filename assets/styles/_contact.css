@@ -1,0 +1,83 @@
+.contact
+{
+    display:flex;
+    flex-direction: column;
+    margin-inline: auto;
+    width:60ch;
+    gap:10px;
+}
+
+.contact input
+{
+    background-color: var(--grey);
+    border:none; 
+    border-radius: 4px;   
+    padding:7px;
+}
+.contact textarea
+{
+    border-radius: 4px;   
+    background-color: var(--grey);
+    height:225px;
+    border:none; 
+    resize: none;  
+}
+.redWildcard
+{
+    color:red;
+}
+.contact #submit {
+    padding: .25rem 1.75rem;
+    background-color: var(--primary-color);
+    color: var(--primary-color-inverse);
+    border-radius: 1rem;
+    text-transform: uppercase;
+    border:none;
+    width:4rem;
+}
+
+#contact
+{
+    display:flex;
+    flex-direction: column;
+    margin-inline:auto;
+    width:60ch;
+}
+#contact h3
+{
+    color: var(--primary-color);
+    margin-inline:auto;
+    width: 60ch;
+}
+.container h1{
+    color: var(--primary-color);
+}
+#contact p
+{
+    width: 60ch;
+}
+.container ul
+{
+    display:flex;
+    flex-direction: column;
+    margin-inline:auto;
+    width:60ch;
+}
+.container li
+{
+    padding:0px;
+    margin:0px;
+}
+.lowerHeader
+{
+    display: flex;
+    min-height:0vh !important;
+}
+#thanks
+{
+    height:50vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: left;
+}

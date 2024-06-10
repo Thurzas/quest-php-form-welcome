@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,9 +56,25 @@
                 quaerat nemo nam, consequuntur nisi alias in praesentium. Fuga amet esse nam doloremque ut nemo nostrum.
             </p>
         </section>
-        <?php //@todo Add a contact form  ?>
+        <section id="contact" class="container">
+            <h2>Get in touch</h2>
+            <?php if(array_key_exists('errors', $_SESSION)): ?>            
+                <h3> Please fix errors below : </h3>
+                <ul>
+                    <li>
+                    <?= implode('<li>', $_SESSION['errors']); ?>
+                </ul>
+            <?php unset($_SESSION['errors']); endif; ?>
+            <p>Please leave us a message and we will come back to you as soon as possible.</p>
+            <form class="contact" method="POST" action="contact.php">
+            <label for="name">Name <span class="redWildcard">*</span></label><input name="name" type="text">
+            <label for="webmail">Email <span class="redWildcard">*</span></label><input name="webmail" type="text">
+            <label for="subject">Subject <span class="redWildcard">*</span></label><input name="subject" type="text">
+            <label for="message">Message <span class="redWildcard">*</span></label><textarea name="message" ></textarea>
+            <input id="submit" type="submit"  value="Send" />
+            </form>
+        </section>
     </main>
     <?php include '_footer.php' ?>
 </body>
-
 </html>
